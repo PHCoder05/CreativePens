@@ -1,0 +1,178 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    .container {
+        margin: 0 auto;
+        padding: 20px;
+        border: solid black 0.5px;
+        border-radius: 12px;
+    }
+    .group-card {
+        margin-bottom: 20px;
+        position: relative;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        background: #f0f8ff;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        justify-content: space-between;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease-in-out, background 0.4s ease-in-out;
+    }
+    .group-card:hover {
+        transform: scale(1.05);
+        background: #e0f7ff;
+    }
+    .whatsapp-card {
+        animation: whatsapp-border-animation 3s infinite;
+    }
+    .telegram-card {
+        animation: telegram-border-animation 3s infinite;
+    }
+    .instagram-card {
+        animation: instagram-border-animation 3s infinite;
+    }
+    @keyframes whatsapp-border-animation {
+        0% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #25d366;
+        }
+        100% {
+            border-color: transparent;
+        }
+    }
+    @keyframes telegram-border-animation {
+        0% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #004F7A;
+        }
+        100% {
+            border-color: transparent;
+        }
+    }
+    @keyframes instagram-border-animation {
+        0% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #E1306C;
+        }
+        100% {
+            border-color: transparent;
+        }
+    }
+    .seoquake-nofollow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 50px;
+        flex-shrink: 0;
+        transition: all 0.3s ease-in-out;
+        color: white !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    .seoquake-nofollow i {
+        margin-right: 10px;
+    }
+    .seoquake-nofollow::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.5s ease-out;
+    }
+    .seoquake-nofollow:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .whatsapp-card .seoquake-nofollow {
+        background: #25d366;
+    }
+    .telegram-card .seoquake-nofollow {
+        background: #004F7A;
+    }
+    .instagram-card .seoquake-nofollow {
+        background: #E1306C;
+    }
+    .seoquake-nofollow:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .icon-bounce {
+        display: inline-block;
+        animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-15px);
+        }
+        60% {
+            transform: translateY(-8px);
+        }
+    }
+    .icon-pulse {
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="group-card whatsapp-card">
+        <span style="display: flex; align-items: center;"><i class="fab fa-whatsapp icon-bounce icon-pulse"
+                style="font-size:30px;color:#25d366;"></i>
+            <span style="font-weight: bold; margin-left: 10px; font-size: 1rem !important;">WhatsApp Group</span>
+        </span>
+        <a class="seoquake-nofollow" href="https://chat.whatsapp.com/F3GCEfzQYQgGuwnXlD9UlF" rel="nofollow noopener noreferrer"
+            target="_blank">
+            <i class="fab fa-whatsapp"></i> Join Now
+        </a>
+    </div>
+    <div class="group-card telegram-card">
+        <span style="display: flex; align-items: center;"><i class="fab fa-telegram icon-bounce icon-pulse"
+                style="font-size:30px;color:#004F7A;"></i>
+            <span style="font-weight: bold; margin-left: 10px; font-size: 1rem !important;">Telegram Group</span>
+        </span>
+        <a class="seoquake-nofollow" href="https://t.me/blogspotstund" rel="nofollow noopener noreferrer"
+            target="_blank">
+            <i class="fab fa-telegram"></i> Join Now
+        </a>
+    </div>
+    <div class="group-card instagram-card">
+        <span style="display: flex; align-items: center;"><i class="fab fa-instagram icon-bounce icon-pulse"
+                style="font-size:30px;color:#E1306C;"></i>
+            <span style="font-weight: bold; margin-left: 10px; font-size: 1rem !important;">Instagram Group</span>
+        </span>
+        <a class="seoquake-nofollow" href="https://www.instagram.com/" rel="nofollow noopener noreferrer"
+            target="_blank">
+            <i class="fab fa-instagram"></i> Join Now
+        </a>
+    </div>
+</div>
